@@ -1,21 +1,18 @@
+'use client'
+
+import { useState } from "react"
 
 
-const topNumbers: number[] = [1,2,3,4]
-const bottomNumbers: number[] = [1,2,3,4]
+
 
 export default function Home() {
+  const [topNumber, setTopNumber] = useState(0)
+  const topNumbers: number[] = []
 
     return (
       <>
-      <div className="grid h-48 place-content-center text-7xl ">
-        {topNumbers}  
-      </div>
-      <div className="grid h-48 place-content-center text-7xl">
-        {bottomNumbers}
-      </div>
-        
-    
+     <button onClick={() => setTopNumber(topNumber + 1)}>Add Top Number</button>
+     {topNumbers.push(topNumber)}
       </>
-);
- 
+ )
 }
