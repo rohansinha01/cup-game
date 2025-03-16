@@ -32,5 +32,16 @@ createUser({name: "rohan", email: "", isActive: true})
 
 console.log(createUser)
 
+type cardNumber = {
+    cardnumber: string
+}
+
+type cardDate = {
+    cardDate: string
+}
+
+type cardDetails = cardNumber & cardDate & {
+    cvv: number
+}
 
 export {}
