@@ -10,3 +10,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function createUser(user) { }
 createUser({ name: "rohan", email: "", isActive: true });
 console.log(createUser);
+var CreditCard = {
+    cardnumber: "la;skdjfl;askdjf;l",
+    cardDate: "alksdjf;lskdjfl;s",
+    cvv: 234
+};
+console.log(CreditCard);

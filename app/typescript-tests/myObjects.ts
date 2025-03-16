@@ -44,4 +44,12 @@ type cardDetails = cardNumber & cardDate & {
     cvv: number
 }
 
+const CreditCard: cardDetails = {
+    cardnumber: "la;skdjfl;askdjf;l",
+    cardDate: "alksdjf;lskdjfl;s",
+    cvv: 234
+}
+
+console.log(CreditCard)
+
 export {}
