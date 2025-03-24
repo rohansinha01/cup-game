@@ -3,26 +3,24 @@
 
 import { useState } from "react"
 
-const topNumbers: number[] = [1,2,3,4]
-const bottomNumbers: number[] = [1,2,3,4]
+const topRow: string[] = ["red","blue","green"]
+const bottomRow: string[] = ["red","blue","green"]
+
 
 export default function Home() {
-  const [topNumber, setTopNumber] = useState(topNumbers)
+ const checkNumbers = () => {
+  if(topRow === bottomRow) {
+  return <p>All set</p>
+  
+}
+}
 
   return (
     <>
-      <div className="grid h-48 place-content-center text-7xl ">
-        {topNumber}  
-      </div>
-      <div className="grid h-48 place-content-center text-7xl">
-        {bottomNumbers}
-      </div>
-      
-      {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-      <button onClick={() => setTopNumber(topNumber.map(num => num + 1))} className="grid place-self-center text-7xl bg-blue-500 hover:bg-blue-700 p-4 rounded-2xl" >
-        Add To Top Row
-      </button>
-      <div>{[topNumbers]}{topNumber}</div>
+    <h1>{topRow.map((color, index) => <span key={index}>{color} </span>)}</h1>
+    <h1>{bottomRow.map((color, index) => <span key={index}>{color} </span>)}</h1>
+    {checkNumbers()}
+    
     </>
   );
 }
